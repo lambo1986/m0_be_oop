@@ -55,17 +55,24 @@ class Dragon
       @rider= rider
       @color = color
       @is_hungry = is_hungry
+      @eat_count = 0
     end
   
-    def eat(food1, food2, food3, food4)
-        return @is_hungry = false
+    def eat(int)
+        @eat_count =+ int
+      if @eat_count >= 4
+        @is_hungry = false
+      else 
+        @is_hungry = true
     end
   end
+end
    dragon1 = Dragon.new("Smog", "Bilbo", "silver")
-  dragon1.eat("spinach", "tumeric", "ginger", "tomato")
-  p dragon1
+dragon1.eat(3)
+p dragon1
   dragon2 = Dragon.new("Krakk", "Alarnius", "orange")
-  p dragon2
+dragon2.eat(7)
+p dragon2
 
 #  Write a Hobbit class
 #  it should have a dynamic name attribute (string)
