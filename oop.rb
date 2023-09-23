@@ -58,7 +58,7 @@ class Dragon
       @eat_count = 0
     end
   
-    def eat(int)
+    def eat(int)             
         @eat_count =+ int
       if @eat_count >= 4
         @is_hungry = false
@@ -72,6 +72,37 @@ dragon1.eat(3)
 p dragon1
   dragon2 = Dragon.new("Krakk", "Alarnius", "orange")
 dragon2.eat(7)
+p dragon2
+
+#better/ different way
+
+class Dragon
+  def initialize(name, rider, color, is_hungry = true)
+    @name = name
+    @rider= rider
+    @color = color
+    @is_hungry = is_hungry
+    @eat_count = 0
+  end
+
+  def eat
+      @eat_count = @eat_count.next
+    if @eat_count >= 4
+      @is_hungry = false
+    else 
+      @is_hungry = true
+  end
+end
+end
+ dragon1 = Dragon.new("Smog", "Bilbo", "silver")
+dragon1.eat
+dragon1.eat
+dragon1.eat
+dragon1.eat
+dragon1.eat
+p dragon1
+dragon2 = Dragon.new("Krakk", "Alarnius", "orange")
+dragon2.eat
 p dragon2
 
 #  Write a Hobbit class
@@ -110,5 +141,250 @@ class Hobbit
   hobbit2 = Hobbit.new("Bilbo", "grumpy")
   hobbit2.celebrate_birthday(123)
   p hobbit2
+
+  # other/ more exact way
+
+  class Hobbit
+    def initialize(name, disposition, age = 0, is_adult = false, is_old = false)
+      @name = name
+      @disposition = disposition
+      @age = age
+      @is_adult = is_adult
+      @is_old = is_old
+      @has_ring = false
+      
+    if @name == "Frodo"
+      @has_ring = true
+    end  
+  end
+    def celebrate_birthday
+      @age = @age.next
+      if @age >= 33 && @age <= 100
+       @is_adult = true
+      elsif @age >= 101
+       @is_old = true
+      end
+    end
+  end
+  hobbit1 = Hobbit.new("Frodo", "paranoid")
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+hobbit1.celebrate_birthday
+  p hobbit1
+  hobbit2 = Hobbit.new("Bilbo", "grumpy")
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+hobbit2.celebrate_birthday
+  p hobbit2
+
+
+  
       
   
